@@ -1,0 +1,585 @@
+/***********
+* 页面样式
+************/
+
+/*==========
+  基本默认值
+ ==========*/
+
+ html {
+ 	font-size: 62.5%;/*font-size=10/16*100%,1rem=10px;font-size=100%;1rem=16px;*/
+ 	color: #222;
+ }
+ ::selection {
+ 	background-color: #b3d4fc;
+ 	text-shadow: none;
+ }
+ ul {
+ 	margin: 0;
+ 	padding: 0;
+ }
+ ul li {
+ 	list-style: none;
+ }
+a {
+	color: #666;
+	text-decoration: none;
+}
+a:hover,a:active {
+	color: #0ae;
+	text-decoration: underline;
+}
+ /*==========
+  工具样式
+ ==========*/
+ .clearfloat:before,.clearfloat:after {
+ 	content: " ";
+ 	display: table;
+ }
+ .clearfloat:after {
+ 	clear: both;
+ }
+  /*==========
+  自定义样式
+ ==========*/
+ body {
+ 	font-size: 1.2rem;
+ 	line-height: 1.5;
+ 	background-color: #f7f7f7;
+ }
+ header,.container,footer {
+ 	width: 100%;
+ }
+ /************头部导航部分**************/
+  /**********顶部导航************/
+ .top {
+ 	line-height: 3rem;
+ 	padding: 0 1.5rem;
+ 	color: #fff;
+ 	background-color: #555555;
+ }
+ .top a {
+ 	color: #fff;
+ 	display: inline-block;
+ 	padding:0 1.5rem;
+ }
+ .top ul,  .main ul {
+ 	float: right;	
+ }
+ .top li,  .main li {
+ 	display: inline-block;
+ }
+ .top li + li {
+ 	border-left: 1px solid #999;
+ }
+
+ @media only screen and (max-width: 800px) {
+ 	.top a {
+ 		padding:0 1rem;
+ 	}
+ }
+ @media only screen and (max-width: 480px) {
+ 	.top span, .top li:nth-child(3), .top li:nth-child(4){
+ 		display: none;
+ 	} 
+ }
+  /***********头部第二个导航************/
+ .main li {
+ 	border-left: 1px solid #f0ede9;
+ }
+  .main a{
+ 	color: #7c7a65;
+ 	line-height: 5.5rem;
+ 	font-size: 1.6rem;
+ 	font-weight: bold;
+ 	display: inline-block;
+ 	padding: 0 2.5rem;
+ }
+
+ .main img {
+ 	vertical-align: middle;
+ }
+
+ @media only screen and (max-width: 800px) {
+ 	.main a {
+ 		width:100%;
+ 		text-align: center;
+ 		padding: 0 2rem;
+ 	}
+ 	 .main>a:first-child{
+	 	padding: 0;
+	 	line-height: 5.5rem;
+ 	}	
+ 	.main ul{
+ 		float:none;
+ 		text-align: center;
+ 	}
+ 	.main ul li{
+ 		border-style: none;
+ 	}
+ }
+ @media only screen and (max-width: 480px) {
+ 	.main li:nth-child(1) {
+ 		display: none;
+ 	}
+ 	.main a{
+ 		font-weight: normal;
+ 		padding: 0 1rem;
+ 	}
+ }
+ /******************主要内容部分******************/
+ /***********平台交易额************/
+ .transaction {
+ 	background-color: #7c7365;
+ 	padding:0 5rem;
+ 	color: #fff;
+ }	
+  .transaction p {
+  	display: inline-block;
+  	font-size: 1.5rem;
+  	line-height: 5rem;
+  	margin:0 20px;
+
+ }
+  
+  .tran-money {	
+  	line-height: 3rem;
+  	display: inline-block;
+  	font-size: 2.2rem;
+  	padding: 0 10px;
+  	background-color: #fff;
+  	color:#ff9900;
+  	letter-spacing: 0.3rem;
+  	border-radius: 5px;
+  	margin:0 10px;
+  	box-shadow: 1px 2px 1px #333 inset;
+  }
+ .transaction a {
+ 	color: #fff;
+ 	float:right;
+ 	line-height: 5rem;
+ 	font-size: 1.6rem;
+ } 
+  @media only screen and (max-width: 800px) {
+  	.transaction p ,.transaction a{
+  		font-size: 1.2rem;
+  	}
+  	.tran-money{
+  		display: inline;
+  		margin:0 5px;
+  		padding: 0;
+  		background-color:#7c7365;
+  		box-shadow: none;
+  		letter-spacing: 0.1rem;
+  		font-size: 1.4rem;
+  	}
+  }
+   @media only screen and (max-width: 480px) {
+   		.transaction {
+   			text-align: center;
+   			padding:1rem 0;
+   		}
+   		.transaction p{
+   			display: block;
+   			line-height: 2.5rem;
+   		}
+   		.transaction a{
+   			float:none;
+   			line-height: 2.5rem;
+   		}
+   }
+  /***********广告************/
+ .ad {
+ 	
+ }
+ /**********宽度设置*****************/ 
+  .feature, .notice, .product{
+  	width: 90%;
+  	margin:1.4rem auto;
+  	font-size: 0;
+  	
+}
+ @media only screen and (max-width: 480px) {
+ 	 .feature, .notice, .product{
+  	width: 96%; 	
+	}
+ }
+/************特点******************/ 	
+  .feat-item {
+  	display: inline-block;
+  	width: 32%;
+  	text-align: center;
+  	background-color: #fff;
+  	box-shadow: 0 0 4px #999;
+  	
+
+  }
+  .feat-item + .feat-item {
+  	margin-left: 2%;
+  }
+  .feat-item p,.feat-item h2{
+  	display: inline-block;
+  }
+  .feat-item h2 {
+  	color: #ff9900;
+  	font-size: 3.3rem;
+  	vertical-align: middle;
+  	width:40%;
+  }
+  .feat-item p{
+  	color: #999;
+  	font-size: 1.4rem;
+  	vertical-align: middle;
+  	text-align: left;
+  	width:55%;
+  	margin-left: 5%;
+  }
+   @media only screen and (max-width: 480px) {
+  	.feat-item {
+  		padding: 1rem 0;
+  		display: block;
+  		width: 100%;
+  	}
+  	.feat-item + .feat-item {
+  	margin-left: 0;
+  	margin-top:1rem;
+  }
+  .feat-item p{
+  
+  	
+  
+  }
+  .feat-item h2{
+  
+  	font-size: 3.3rem;
+  }
+}
+  @media only screen and  (min-width: 481px) and (max-width: 800px) {
+  	.feat-item {
+  		padding: 1rem 0;
+  	}
+  	.feat-item p,.feat-item h2{
+  		margin:0;
+  		width:100%;
+  		text-align: center;
+  }
+  .feat-item h2{
+  	font-size: 2.6rem;
+  }
+  .feat-item p {
+  	font-size: 1.2rem;
+  }
+ }
+/**************最新通告***************/ 
+.notice {
+	font-size: 1.4rem;
+	background: #fff;
+	box-sizing: border-box;
+	box-shadow: 0 0 4px #999;
+	padding: 0px 20px;
+}
+.notice span {
+	color: #999;
+	display: inline-block;
+	margin:0 5px;
+	line-height: 4rem;
+	vertical-align: top;
+}
+.notice-content{
+	vertical-align: top;
+	display: inline-block;
+	width:70%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	line-height: 4rem;
+}
+.more {
+	line-height: 4rem;
+	float:right;
+	color: #ff9900;
+}
+@media only screen and (max-width: 800px){
+	.notice-content{
+		width: 60%;
+	}
+}
+@media only screen and (max-width: 480px){
+	.notice{
+		font-size: 1.2rem;
+	}
+	.notice span:nth-child(2){
+		display: none;
+	}
+}
+/************产品*************/ 
+.product {
+	background-color: #f5f9fa;
+	border-top: 2px solid #ff9900;
+	box-shadow: 0 0 5px #999;
+}
+.pro-title, .pro-time,.pro-info,.pro-buy{
+	vertical-align: top;
+	height:100px;
+	display: inline-block;
+	font-size: 1.4rem;
+	text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+.pro-information{
+	display: inline-block;
+	background-color: #fff;
+}
+.pro-title {
+	width: 20%;
+	vertical-align: top;
+	display: inline-block;
+	font-size: 1.4rem;
+	text-align: center;
+	
+}
+.pro-title h2{
+	font-size: 2.4rem;
+	font-weight: normal;
+}
+.pro-title em{
+	display: block;
+	font-size: 1.6rem;
+	color: #999;
+}
+.pro-title em:first-child{
+	margin-top: 4.8rem;
+}
+
+.pro-item + .pro-item{
+	border-top:1px solid #eee;
+}
+.pro-info {
+	width:48%;
+	font-size: 0px;	
+	box-sizing: border-box;
+	border-left:1px solid #eee;
+	border-right: 1px solid #eee;
+	
+	
+}
+.pro-information {
+	width: 80%;
+}
+.pro-time{
+	
+	width: 30%;
+}
+.pro-time span:first-child{
+	font-size: 3.6rem;
+	color: #8b999d;
+	display: inline-block;
+	margin-right: 5px;
+}
+.pro-time span:nth-of-type(2){
+	font-size: 1.2rem;
+	color: #999;
+}
+.pro-info div{
+	width: 50%;
+	display: inline-block;
+	font-size: 1.4rem;	
+}
+.pro-info div span:last-child{
+		display: inline-block;
+		margin-left: 0.5rem;
+	}
+.pro-number{
+	color: #ff9900;
+	font-size: 2.4rem;
+}
+.pro-number +span{
+	color:#999;
+	font-size: 1.2rem;
+}
+.pro-buy{	
+	width: 22%;
+}
+.pro-buy a{
+	display: inline-block;
+	background-color: #ff9900;
+	color: #fff;
+	padding:18px 0;
+	width:80%;
+	border-radius: 10px;
+}
+.pro-buy a:hover{
+	text-decoration: none;
+	opacity: 0.5;
+}
+@media only screen and (max-width: 800px){
+	.pro-title {
+		display: flex;
+		align-items: center;
+		width:100%;
+
+	}
+	.pro-title em{
+		display: inline-block;
+		font-size: 1.2rem;
+		margin-left:0.5rem;
+	}
+	.pro-title h2{
+		display: inline-block;
+		font-size: 2.2rem;
+		color: #635c51;
+		margin-right: 0.5rem	}
+	.pro-information{
+		width: 100%;
+		display: block;
+	}
+	.pro-info div{
+		font-size: 1.2rem;
+	}
+	.pro-buy a{
+		width: 60%;
+	}
+	
+}
+@media only screen and (max-width: 480px){
+	.pro-title{
+		padding: 1rem 0;
+	}
+	.pro-title h2{
+		display: block;
+		margin: 0.2rem 0;
+	}
+	.pro-time span:first-child,.pro-number{
+		font-size: 2rem;
+	}
+	.pro-buy{
+	width: 100%;
+	}
+	.pro-buy a {
+		width: 80%;
+	}
+	.pro-time{
+		width:40%;
+	}
+	.pro-info{
+		width:60%;
+		border-style: none;
+		
+	}
+}
+/***************底部链接*****************/
+.part7 {
+	width:100%;
+	background-color: #fff;
+	padding: 36px 0;
+}
+.part7-content {
+	width: 90%;
+	margin:0 auto;
+	font-size: 0;
+	text-align: center;
+}
+.part7 ul{
+	vertical-align: top;
+	width: 16.66%;
+	display: inline-block;
+	font-size: 1.4rem;
+	color: #666;
+	
+}
+.part7 li{
+	line-height: 2.4rem;
+}
+.part7-title {
+	font-size: 1.6rem;
+	color: #000;
+}
+.part7-content div{
+	width: 16.66%;
+	display: inline-block;
+	text-align: center;
+}
+.part7-logo {
+	display: inline-block;
+	background: url(../image/logo@1x.png) no-repeat;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	width: 150px;
+	height:35px;
+	margin-right: 40px;
+}
+@media only screen and (max-width: 800px){
+	.part7-content div {
+		display: none;
+	}
+	.part7 ul {
+		width: 20%;
+		font-size: 1.2rem;
+	}
+}
+  /******************页脚部分******************/
+  footer {
+  	padding:36px 0 60px 0;
+  	background-color: #ededed;
+  	text-align: center;
+  	color: #999;
+  }
+  footer ul{
+  	display: inline-block;
+  	margin :0;
+  	padding: 0;
+  } 
+  footer li {
+  	display: inline-block;
+
+  }
+  footer li + li {
+  	margin-left: 1.5rem;
+  }
+  .icon {
+  	display: inline-block;
+  	text-indent: -999rem;
+  	background-image: url(../image/cert1.png);
+  	background-repeat: no-repeat;
+  	background-size: 466px 447px;
+  	overflow: hidden;
+  }
+.icon-zfywxkz {
+  	width: 38px;
+  	height: 27px;
+  	background-position: -369px -45px;
+  }
+  .icon-pcirz {
+  	width: 78px;
+  	height: 27px;
+  	background-position: -110px -96px;
+  }
+  .icon-vsyz {
+  	width: 36;
+  	height: 27px;
+  	background-position: -426px -90px;
+  }
+  .icon-vsjm {
+  	width: 63px;
+  	height: 27px;
+  	background-position: -406px -186px;
+  }
+  .icon-wlgs {
+  	width: 22px;
+  	height: 27px;
+  	background-position: -48px -48px;
+  }
+  .icon-dzxh {
+  	width: 75px;
+  	height: 27px;
+  	background-position: 0px -320px;
+  }
+  .icon-bjgs {
+	width: 30px;
+  	height: 27px;
+  	background-image: url(../image/cert2.png);
+  	background-size: 30px;
+  }
